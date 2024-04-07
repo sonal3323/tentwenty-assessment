@@ -1,5 +1,5 @@
 {
-  "name": "demo",
+  "name": "tentwenty_assessment",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,7 +9,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "Sonal",
   "license": "ISC",
   "dependencies": {
     "@babel/core": "^7.24.4",

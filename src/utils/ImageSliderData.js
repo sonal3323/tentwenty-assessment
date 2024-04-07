@@ -1,7 +1,8 @@
-import slide_image_1 from "../assets/images/img_1.svg";
-import slide_image_2 from "../assets/images/img_2.svg";
-import slide_image_3 from "../assets/images/img_3.svg";
-import slide_image_4 from "../assets/images/img_4.svg";
+import slide_image_1 from "../assets/images/img_1.png";
+import slide_image_2 from "../assets/images/img_2.png";
+import slide_image_3 from "../assets/images/img_3.png";
+import slide_image_4 from "../assets/images/img_4.png";
+import slide_image_5 from "../assets/images/img_5.png";
 
 const data=[
     {
@@ -25,7 +26,7 @@ const data=[
         description:"Location"
     },
     {
-        url:slide_image_3,
+        url:slide_image_5,
         title:"Client 5",
         description:"Location"
     }
