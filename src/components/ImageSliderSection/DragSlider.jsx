@@ -16,15 +16,18 @@ const DragSlider = () => {
         spaceBetween={80}
         grabCursor={true}
         centeredSlides={true}
-        // breakpoints={
-        //   {
-        //     320: {
-        //       spaceBetween: 20,
-        //     },  
-        //   }
-        // }
+        breakpoints={
+          {
+            320: {
+              spaceBetween: 20,
+            },
+            768: {
+              spaceBetween: 80,
+            },  
+          }
+        }
         className="drag-swipper"
-        slidesPerView={3} // Set the number of slides to view
+        slidesPerView={3}
       >
         {data.map(({ url, title, description }) => {
           return (
@@ -33,6 +36,7 @@ const DragSlider = () => {
                 <img src={url} alt={title} />
               </div>
               <div className="slide-content">
+                {/* slide up animation of content */}
                 <motion.h3 {...AnimationData.slideUpDelay} className="slide-content__title" >{title}</motion.h3>
                 <motion.p {...AnimationData.slideUpDelay} className="slide-content__sub-title">{description}</motion.p>
               </div>

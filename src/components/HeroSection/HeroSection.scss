@@ -1,5 +1,9 @@
 @import "../../styles/main.scss";
 
+.section-hero {
+  position: relative;
+}
+
 .banner-swiper {
   width: 100%;
   height: 100vh;
@@ -20,26 +24,26 @@
     }
   }
 
-  .autoplay-progress {
-    position: absolute;
-    left: 11% !important;
-    bottom: 24px;
-    z-index: 10;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    color: var(--swiper-theme-color);
+  // .autoplay-progress {
+  //   position: absolute;
+  //   left: 7% !important;
+  //   bottom: 24px;
+  //   z-index: 10;
+  //   display: flex;
+  //   align-items: center;
+  //   justify-content: center;
+  //   font-weight: bold;
+  //   color: var(--swiper-theme-color);
 
-    @include breakpoint(sm) {
-      left: -5% !important;
-    }
-  }
+  //   @include breakpoint(sm) {
+  //     left: -5% !important;
+  //   }
+  // }
 
   .swiper-pagination-fraction {
     color: white;
-    bottom: var(--swiper-pagination-bottom, 85px);
-    left: -22%;
+    bottom: var(--swiper-pagination-bottom, 15%);
+    left: -26%;
   }
 }
 
@@ -52,8 +56,12 @@
   text-shadow: 2px 2px 5px black;
   max-width: 700px;
 
+  @include breakpoint(md) {
+    top: 32%;
+  }
+
   @include breakpoint(sm) {
-    left: 6%;
+    top: 25%;
   }
 
   &__title {

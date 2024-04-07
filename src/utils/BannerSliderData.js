@@ -3,7 +3,7 @@ import slide_image_2 from "../assets/images/img_banner_2.jpg";
 import slide_image_3 from "../assets/images/img_banner_3.png";
 import slide_image_4 from "../assets/images/img_banner_4.png";
 
-const data=[
+const data = [
     {
         url:slide_image_1,
         title:"banner image 1",

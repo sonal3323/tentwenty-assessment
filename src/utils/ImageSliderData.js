@@ -4,7 +4,7 @@ import slide_image_3 from "../assets/images/img_3.png";
 import slide_image_4 from "../assets/images/img_4.png";
 import slide_image_5 from "../assets/images/img_5.png";
 
-const data=[
+const data = [
     {
         url:slide_image_1,
         title:"Client 1",

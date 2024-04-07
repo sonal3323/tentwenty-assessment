@@ -6,7 +6,8 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "./HeroSection.scss";
-import NextImageIndicator from "../ImageSliderSection/NextImageIndicator.jsx";
+import Header from "../Header/Header.jsx";
+import NextImageIndicator from "./NextImageIndicator.jsx";
 import data from "../../utils/BannerSliderData.js";
 import { AnimationData } from "../../utils/animationData.js";
 import { motion } from "framer-motion";
@@ -14,7 +15,6 @@ import { Autoplay, Pagination, Navigation, A11y } from "swiper/modules";
 
 const HeroSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-
   const onSlideChange = (swiper) => {
     setCurrentSlide(swiper.activeIndex);
   };
@@ -26,7 +26,11 @@ const HeroSection = () => {
   };
   
   return (
-    <>
+    <section className="section-hero">
+      {/* header component */}
+      <Header/>
+
+      {/* banner content */}
       <div className="banner-content">
         <motion.p {...AnimationData.slideUpDelay} className="banner-content__description">Welcome to the Twenty Farms</motion.p>
         <motion.h1 {...AnimationData.slideUpDelay} className="banner-content__title" >
@@ -34,6 +38,7 @@ const HeroSection = () => {
         </motion.h1>
       </div>
 
+      {/* banner slider component */}
       <Swiper
         spaceBetween={30}
         centeredSlides={true}
@@ -49,7 +54,6 @@ const HeroSection = () => {
         onSlideChange={onSlideChange}
         className="banner-swiper"
       >
-
         {data.map(({ url, title }) => {
           return (
             <SwiperSlide>
@@ -58,15 +62,18 @@ const HeroSection = () => {
           );
         })}
 
+        {/* autoplay thumbnail indicator with progress bar */}
         <div className="autoplay-progress" slot="container-end">
           <svg viewBox="0 0 48 48" width="48" height="48" ref={progressBar}>
             <rect x="12" y="12" width="24" height="24"></rect>
           </svg>
           <span ref={progressContent} style={{ display: "none" }}></span>
+
+          {/* thumbnail slider component */}
           <NextImageIndicator currentSlide={currentSlide + 1} />
         </div>
       </Swiper>
-    </>
+    </section>
   );
 };
 

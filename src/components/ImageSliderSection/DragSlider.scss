@@ -51,18 +51,11 @@
         }
     }
 
-
     .swiper-slide {
         text-align: center;
         background: white;
         width: 30% !important;
         height: 30rem !important;
-
-        @media(max-width:500px) {
-            .swiper-slide {
-                min-width: 80% !important;
-            }
-        }
 
         img {
             display: block;
