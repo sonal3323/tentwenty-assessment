@@ -1,0 +1,230 @@
+@import "../styles/main.scss";
+
+// .header {
+//   height: 80px;
+//   background: white;
+//   color: black;
+//   position: absolute;
+//   z-index: 1000;
+//   width: 98%;
+//   margin-top: 1rem;
+//   margin-left: 1rem;
+//   font-weight: 500;
+//   font-size: 1.3rem;
+//   @include breakpoint(sm) {
+//     width: 100%;
+//     margin: 0;
+//   }
+
+//   &__content {
+//     padding: 0 16px;
+    
+//     display: flex;
+//     align-items: center;
+//     justify-content: space-between;
+
+//     transition: 0.3s ease padding;
+//     height: 100%;
+//     align-items: center;
+
+//     @include breakpoint(sm) {
+//       flex-direction: column;
+//       align-items: center;
+//     }
+//   }
+
+//   &__button__container {
+//     display: none;
+
+//     @include breakpoint(md) {
+//       display: initial;
+//     }
+
+//     @include breakpoint(sm) {
+//       display: flex;
+//       position: absolute;
+//       top: 0.9rem;
+//       font-size: 1rem;
+//       font-weight: normal;
+//       left: 0;
+//       margin-left: 1rem;
+//     }
+//   }
+
+//   &__toggler {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     cursor: pointer;
+//     margin-left: 18rem;
+//     margin-top: 1.4rem;
+
+//     @include breakpoint(md) {
+//       display: none;
+//     }
+
+//     & > svg {
+//       display: block;
+//       font-size: 32px;
+//     }
+//   }
+// }
+ 
+.header {
+  background: white;
+  max-width: 98%;
+  position: absolute;
+  top: 2%;
+  left: 2%;
+  right: 2%;
+  z-index: 1000;
+
+  @include breakpoint(sm) {
+    max-width: 100%;
+    position: initial;
+  }
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 32px 32px 32px 0;
+
+  @include breakpoint(sm) {
+    padding: 21px 24px;
+  }
+
+  &__left {
+    @include breakpoint(sm) {
+      display: none;
+    }
+
+    .nav {
+      &__list {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      &__list-item {
+        margin: 0 10px;
+
+        &:first-child {
+          margin-left: unset;
+        }
+
+        &:last-child {
+          margin-right: unset;
+        }
+      }
+
+      &__item {
+        font-size: 14px;
+        line-height: 20px;     
+      }
+    }
+  }
+
+  &__right {
+    @include breakpoint(sm) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+    }
+
+    .nav-link {
+      &__wrap {
+        display: flex;
+        align-items: center;
+        border: 1px solid black;
+        background: #FFFCFA;
+        padding: 8px 18px;
+
+        svg {
+          color: #221F20;
+          margin-left: 10px;
+        }
+      }
+    }
+
+    .link-title {
+      font-size: 16px;
+      line-height: 18px;
+    }
+  }
+
+  &__toggler {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    @include breakpoint(md) {
+      display: none;
+    }
+
+    & > svg {
+      display: block;
+      font-size: 44px;
+      border-radius: unset;
+    }
+  }
+}
+
+.nav_list {
+  width: 100%;
+  position: fixed;
+  top: 110px;
+  right: -100%;
+  text-align: center;
+  padding: 16px 0;
+
+  &--open {
+    transition: 0.2s ease right;
+    right: 0;
+  }
+
+  &__item {
+    width: 100%;
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: inherit;
+    transition: 0.3s ease color;
+
+    @include breakpoint(sm) {
+      color: white;
+    }
+
+    &:hover {
+      color: cyan;
+    }
+  }
+
+  @include breakpoint(md) {
+    position: static;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    background: initial;
+    width: auto;
+    padding: 0;
+
+    &__item {
+      padding: 0 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  &__button__container {
+    @include breakpoint(md) {
+      display: none;
+    }
+
+    padding: 16px;
+  }
+}

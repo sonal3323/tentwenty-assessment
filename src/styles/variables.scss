@@ -1,0 +1,16 @@
+$text-gray: #7A7777;
+$bg-gray1: #F9F4EE;
+$bg-gray2: #FFFCFA;
+
+@mixin breakpoint($point) {
+  @if $point == md {
+    @media (min-width: 49em) {
+      @content;
+    }
+  }
+  @if $point == sm {
+    @media (max-width: 768px) {
+      @content;
+    }
+  }
+}

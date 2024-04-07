@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;600;700&display=swap');
+@import "./reset.scss";
+@import "./variables.scss";
+
+body {
+    font-family: 'Work Sans', sans-serif;
+    min-width: 100dvw;
+    overflow-x: hidden;
+    font-weight: 400;
+}
+
+a {
+    color: black;
+}
