@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import "./Header.scss";
-import { BiMenuAltRight } from "react-icons/bi";
+import { RxHamburgerMenu } from "react-icons/rx";
 import { AiOutlineCloseSquare } from "react-icons/ai";
-import { FaArrowRightLong } from "react-icons/fa6";
+import { BsArrowRight } from "react-icons/bs";
 
 const menuLinks = [
   {
@@ -49,11 +49,11 @@ const Header = () => {
           <div className="nav-link">
             <a href="/" className="nav-link__wrap">
               <span className="link-title">Contact us</span>
-              <FaArrowRightLong />
+              <BsArrowRight />
             </a>
           </div>
           <button className="header-content__toggler" onClick={menuToggler}>
-            {!menuOpen ? <BiMenuAltRight /> : <AiOutlineCloseSquare />}
+            {!menuOpen ? <RxHamburgerMenu /> : <AiOutlineCloseSquare />}
           </button>
         </div>
       </div>

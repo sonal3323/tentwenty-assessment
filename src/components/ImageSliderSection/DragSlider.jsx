@@ -18,7 +18,7 @@ const DragSlider = () => {
         centeredSlides={true}
         // breakpoints={
         //   {
-        //     768: {
+        //     320: {
         //       spaceBetween: 20,
         //     },  
         //   }

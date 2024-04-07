@@ -4,28 +4,25 @@
   width: 100%;
   height: 100vh;
 
-  .swiper-slide1 {
+  .swiper-slide {
     text-align: center;
     font-size: 18px;
-    background: #fff;
-
-    /* Center slide text vertically */
+    background: white;
     display: flex;
     justify-content: center;
     align-items: center;
-  }
 
-  .swiper-slide1 img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
   }
 
   .autoplay-progress {
     position: absolute;
     left: 11% !important;
-    /* Adjusted to position on the left */
     bottom: 24px;
     z-index: 10;
     display: flex;
@@ -37,41 +34,7 @@
     @include breakpoint(sm) {
       left: -5% !important;
     }
-
-    // svg {
-    //   --progress: 0;
-    //   position: absolute;
-    //   left: 0;
-    //   top: 0px;
-    //   z-index: 10;
-    //   width: 100%;
-    //   height: 100%;
-    //   stroke-width: 2px;
-    //   stroke: white;
-    //   fill: none;
-    //   stroke-dashoffset: calc(125.6px * (1 - var(--progress)));
-    //   stroke-dasharray: 125.6;
-    //   transform: rotate(-90deg);
-    // }
   }
-
-  // .autoplay-progress {
-  //   svg {
-  //     --progress: 0;
-  //     position: absolute;
-  //     left: 0;
-  //     top: 0px;
-  //     z-index: 10;
-  //     width: 100%;
-  //     height: 100%;
-  //     stroke-width: 2px;
-  //     stroke: var(--swiper-theme-color);
-  //     fill: none;
-  //     stroke-dashoffset: calc(125.6px * (1 - var(--progress)));
-  //     stroke-dasharray: 125.6;
-  //     transform: rotate(-90deg);
-  //   }
-  // }
 
   .swiper-pagination-fraction {
     color: white;
@@ -97,6 +60,16 @@
     font-size: 64px;
     line-height: 64px;
     font-weight: 400;
+
+    @include breakpoint(md) {
+      font-size: 52px;
+      line-height: 52px;
+    }
+
+    @include breakpoint(sm) {
+      font-size: 46px;
+      line-height: 46px;
+    }
   }
 
   &__description {

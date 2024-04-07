@@ -1,6 +1,5 @@
 import React from "react";
 import "./ImageSlider.scss";
-// import data from "../utils/ImageSliderData.js";
 import DragSlider from "./DragSlider.jsx";
 import { AnimationData } from "../../utils/animationData.js";
 import { motion } from "framer-motion";

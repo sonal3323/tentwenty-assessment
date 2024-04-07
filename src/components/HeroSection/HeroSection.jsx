@@ -10,9 +10,8 @@ import NextImageIndicator from "../ImageSliderSection/NextImageIndicator.jsx";
 import data from "../../utils/BannerSliderData.js";
 import { AnimationData } from "../../utils/animationData.js";
 import { motion } from "framer-motion";
-
-// import required modules
 import { Autoplay, Pagination, Navigation, A11y } from "swiper/modules";
+
 const HeroSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
@@ -25,6 +24,7 @@ const HeroSection = () => {
     progressBar.current.style.setProperty("--progress", 1 - progress);
     progressContent.current.textContent = `${Math.ceil(time / 2000)}s`;
   };
+  
   return (
     <>
       <div className="banner-content">

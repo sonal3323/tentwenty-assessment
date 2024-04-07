@@ -8,7 +8,6 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "./NextImageIndicator.scss";
-
 // import required modules
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 
@@ -29,7 +28,7 @@ const NextImageIndicator = ({ currentSlide }) => {
         {data.map(({ url, title }) => {
           return (
             <SwiperSlide>
-              <img src={url} alt={title}/>
+              <img src={url} alt={title} />
             </SwiperSlide>
           );
         })}
